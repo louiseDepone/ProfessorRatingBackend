@@ -5,6 +5,7 @@ namespace ProfessorRating.Model;
 public class Rate
 {
     public int Id { get; set; }
+    public DateTime CreatedAt { get; set; } = DateTime.Now;
 
     public int KnowledgeAndDelivery { get; set; }
     public int InterestAndStimulation { get; set; }
@@ -24,6 +25,7 @@ public class Rate
     
     [ForeignKey("User")]
     public int UserId { get; set; }
+
     public User? User { get; set; }
     
     

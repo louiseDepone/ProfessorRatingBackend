@@ -5,6 +5,7 @@ namespace ProfessorRating.Model;
 public class Faculty
 {
     public int Id { get; set; }
+    public DateTime CreatedAt { get; set; } = DateTime.Now;
 
     [ForeignKey("Teacher")]
     public int TeacherId { get; set; }

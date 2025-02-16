@@ -13,6 +13,7 @@ public class SchoolDepartment
     [ForeignKey("Department")]
     public int DepartmentId { get; set; }
     public Department? Department { get; set; }
-    
+        public DateTime CreatedAt { get; set; } = DateTime.Now;
+
     public List<Faculty>? Faculty { get; set; } = new();
 }

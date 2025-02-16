@@ -15,4 +15,6 @@ public class CourseLecturer
     public Course? Course { get; set; }
 
     public List<Rate> Rates { get; set; } = new();
+        public DateTime CreatedAt { get; set; } = DateTime.Now;
+
 }
