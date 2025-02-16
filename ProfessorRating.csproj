@@ -23,7 +23,9 @@
     </ItemGroup>
 
     <ItemGroup>
+      <Folder Include="Controller/" />
       <Folder Include="DTO/" />
+      <Folder Include="Model/" />     
     </ItemGroup>
 
 </Project>
