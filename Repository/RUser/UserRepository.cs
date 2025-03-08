@@ -9,26 +9,32 @@ public class UserRepository(ProfessorRatingDbContext context) : IUserRepository
 
     public User AddUser(User user)
     {
-        throw new NotImplementedException();
+         _context.Add(user);
+         _context.SaveChanges();
+         return user;
     }
 
     public User UpdateUser(User user)
     {
-        throw new NotImplementedException();
+        _context.Update(user);
+        _context.SaveChanges();
+        return user;
     }
 
-    public User DeleteUser(User user)
+    public void DeleteUser(User user)
     {
-        throw new NotImplementedException();
+        _context.Remove(user);
+        _context.SaveChanges();
     }
 
     public List<User> GetAllUsers()
     {
-        throw new NotImplementedException();
+        return _context.User.ToList();
+        
     }
 
     public User? GetUserById(int id)
     {
-        throw new NotImplementedException();
+        return _context.User.FirstOrDefault(user => user.Id == id);
     }
 }

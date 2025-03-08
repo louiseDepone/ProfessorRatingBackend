@@ -9,26 +9,32 @@ public class DepartmentRepository(ProfessorRatingDbContext context) : IDepartmen
 
     public Department AddDepartment(Department department)
     {
-        throw new NotImplementedException();
+        _context.Add(department);
+        _context.SaveChanges();
+        return department;
     }
 
     public Department UpdateDepartment(Department department)
     {
-        throw new NotImplementedException();
+        _context.Update(department);
+        _context.SaveChanges();
+        return department;
     }
 
-    public Department DeleteDepartment(Department department)
+    public void DeleteDepartment(Department department)
     {
-        throw new NotImplementedException();
+        _context.Remove(department);
+        _context.SaveChanges();
+        
     }
 
     public List<Department> GetAllDepartments()
     {
-        throw new NotImplementedException();
+        return _context.Department.ToList();
     }
 
     public Department? GetDepartmentById(int id)
     {
-        throw new NotImplementedException();
+        return _context.Department.FirstOrDefault(department => department.Id == id);
     }
 }

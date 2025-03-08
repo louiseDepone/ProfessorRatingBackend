@@ -9,26 +9,33 @@ public class TeacherRepository(ProfessorRatingDbContext context): ITeacherReposi
 
     public Teacher AddTeacher(Teacher teacher)
     {
-        throw new NotImplementedException();
+         _context.Add(teacher);
+         _context.SaveChanges();
+         return teacher;
     }
 
     public Teacher UpdateTeacher(Teacher teacher)
     {
-        throw new NotImplementedException();
+        _context.Update(teacher);
+        _context.SaveChanges();
+        return teacher;
     }
 
-    public Teacher DeleteTeacher(Teacher teacher)
+    public void DeleteTeacher(Teacher teacher)
     {
-        throw new NotImplementedException();
+        _context.Remove(teacher);
+        _context.SaveChanges();
+        
     }
 
     public List<Teacher> GetAllTeachers()
     {
-        throw new NotImplementedException();
+        return _context.Teacher.ToList();
+        
     }
 
     public Teacher? GetTeacherById(int id)
     {
-        throw new NotImplementedException();
+        return _context.Teacher.FirstOrDefault(teacher => teacher.Id == id);
     }
 }

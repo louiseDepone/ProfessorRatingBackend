@@ -6,7 +6,7 @@ public interface IUserRepository
 {
     User AddUser(User user);
     User UpdateUser(User user);
-    User DeleteUser(User user);
+    void DeleteUser(User user);
     List<User> GetAllUsers();
     User? GetUserById(int id);
 }

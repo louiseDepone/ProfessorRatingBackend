@@ -9,26 +9,33 @@ public class SchoolRepository(ProfessorRatingDbContext context): ISchoolReposito
 
     public School AddSchool(School school)
     {
-        throw new NotImplementedException();
+        _context.School.Add(school);
+        _context.SaveChanges();
+        return school;
     }
 
     public School UpdateSchool(School school)
     {
-        throw new NotImplementedException();
+        _context.School.Update(school);
+        _context.SaveChanges();
+        return school;
     }
 
-    public School DeleteSchool(School school)
+    public void DeleteSchool(School school)
     {
-        throw new NotImplementedException();
+        _context.School.Remove(school);
+        _context.SaveChanges();
+        
     }
 
     public List<School> GetAllSchools()
     {
-        throw new NotImplementedException();
+        return _context.School.ToList();
+        
     }
 
     public School? GetSchoolById(int id)
     {
-        throw new NotImplementedException();
+        return _context.School.FirstOrDefault(school => school.Id == id);
     }
 }

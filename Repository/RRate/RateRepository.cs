@@ -9,26 +9,31 @@ public class RateRepository(ProfessorRatingDbContext context) : IRateRepository
 
     public Rate AddRate(Rate rate)
     {
-        throw new NotImplementedException();
+        _context.Rate.Add(rate);
+        _context.SaveChanges();
+        return rate;
     }
 
     public Rate UpdateRate(Rate rate)
     {
-        throw new NotImplementedException();
+        _context.Rate.Update(rate);
+        _context.SaveChanges();
+        return rate;
     }
 
-    public Rate DeleteRate(Rate rate)
+    public void DeleteRate(Rate rate)
     {
-        throw new NotImplementedException();
+        _context.Rate.Remove(rate);
+         _context.SaveChanges();
     }
 
     public List<Rate> GetAllRates()
     {
-        throw new NotImplementedException();
+        return _context.Rate.ToList();
     }
 
     public Rate? GetRateById(int id)
     {
-        throw new NotImplementedException();
+        return _context.Rate.FirstOrDefault(rate => rate.Id == id);
     }
 }

@@ -9,26 +9,33 @@ public class SchoolDepartmentRepository(ProfessorRatingDbContext context): IScho
 
     public SchoolDepartment AddSchoolDepartment(SchoolDepartment schoolDepartment)
     {
-        throw new NotImplementedException();
+        _context.SchoolDepartment.Add(schoolDepartment);
+        _context.SaveChanges();
+        return schoolDepartment;
     }
 
     public SchoolDepartment UpdateSchoolDepartment(SchoolDepartment schoolDepartment)
     {
-        throw new NotImplementedException();
+        _context.SchoolDepartment.Update(schoolDepartment);
+        _context.SaveChanges();
+        return schoolDepartment;
     }
 
-    public SchoolDepartment DeleteSchoolDepartment(SchoolDepartment schoolDepartment)
+    public void DeleteSchoolDepartment(SchoolDepartment schoolDepartment)
     {
-        throw new NotImplementedException();
+        _context.SchoolDepartment.Remove(schoolDepartment);
+        _context.SaveChanges();
+        
     }
 
     public List<SchoolDepartment> GetAllSchoolDepartments()
     {
-        throw new NotImplementedException();
+        return _context.SchoolDepartment.ToList();
+        
     }
 
     public SchoolDepartment? GetSchoolDepartmentById(int id)
     {
-        throw new NotImplementedException();
+        return _context.SchoolDepartment.FirstOrDefault(schoolDepartment => schoolDepartment.Id == id);
     }
 }

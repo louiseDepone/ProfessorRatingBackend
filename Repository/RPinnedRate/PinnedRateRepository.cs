@@ -9,26 +9,33 @@ public class PinnedRateRepository(ProfessorRatingDbContext context) : IPinnedRat
 
     public PinnedRate AddPinnedRate(PinnedRate pinnedRate)
     {
-        throw new NotImplementedException();
+        _context.Add(pinnedRate);
+        _context.SaveChanges();
+        return pinnedRate;
     }
 
     public PinnedRate UpdatePinnedRate(PinnedRate pinnedRate)
     {
-        throw new NotImplementedException();
+        _context.Update(pinnedRate);
+        _context.SaveChanges();
+        return pinnedRate;
     }
 
-    public PinnedRate DeletePinnedRate(PinnedRate pinnedRate)
+    public void DeletePinnedRate(PinnedRate pinnedRate)
     {
-        throw new NotImplementedException();
+        _context.Remove(pinnedRate);
+        _context.SaveChanges();
+        
     }
 
     public List<PinnedRate> GetAllPinnedRates()
     {
-        throw new NotImplementedException();
+        return _context.PinnedRate.ToList();
+        
     }
 
     public PinnedRate? GetPinnedRateById(int id)
     {
-        throw new NotImplementedException();
+        return _context.PinnedRate.FirstOrDefault(pr => pr.Id == id);
     }
 }

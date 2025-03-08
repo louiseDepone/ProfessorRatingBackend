@@ -6,7 +6,7 @@ public interface IRateRepository
 {
     Rate AddRate(Rate rate);
     Rate UpdateRate(Rate rate);
-    Rate DeleteRate(Rate rate);
+    void DeleteRate(Rate rate);
     List<Rate> GetAllRates();
     Rate? GetRateById(int id);
 }

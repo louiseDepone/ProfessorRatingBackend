@@ -9,26 +9,31 @@ public class CourseRepository(ProfessorRatingDbContext context) : ICourseReposit
 
     public Course AddCourse(Course course)
     {
-        throw new NotImplementedException();
+        _context.Add(course);
+        _context.SaveChanges();
+        return course;
     }
 
     public Course UpdateCourse(Course course)
     {
-        throw new NotImplementedException();
+        _context.Update(course);
+        _context.SaveChanges();
+        return course;
     }
 
-    public Course DeleteCourse(Course course)
+    public void DeleteCourse(Course course)
     {
-        throw new NotImplementedException();
+        _context.Remove(course);
+        _context.SaveChanges();
     }
 
     public List<Course> GetAllCourses()
     {
-        throw new NotImplementedException();
+        return _context.Course.ToList();
     }
 
     public Course? GetCourseById(int id)
     {
-        throw new NotImplementedException();
+        return  _context.Course.FirstOrDefault(c => c.Id == id);
     }
 }

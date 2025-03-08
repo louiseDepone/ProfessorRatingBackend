@@ -9,26 +9,32 @@ public class FacultyRepository(ProfessorRatingDbContext context) : IFacultyRepos
 
     public Faculty AddFaculty(Faculty faculty)
     {
-        throw new NotImplementedException();
+        _context.Faculty.Add(faculty);
+        _context.SaveChanges();
+        return faculty;
     }
 
     public Faculty UpdateFaculty(Faculty faculty)
     {
-        throw new NotImplementedException();
+        _context.Faculty.Update(faculty);
+        _context.SaveChanges();
+        return faculty;
     }
 
-    public Faculty DeleteFaculty(Faculty faculty)
+    public void DeleteFaculty(Faculty faculty)
     {
-        throw new NotImplementedException();
+        _context.Faculty.Remove(faculty);
+        _context.SaveChanges();
     }
 
     public List<Faculty> GetAllFaculties()
     {
-        throw new NotImplementedException();
+        return _context.Faculty.ToList();
+        
     }
 
     public Faculty? GetFacultyById(int id)
     {
-        throw new NotImplementedException();
+        return _context.Faculty.FirstOrDefault(faculty => faculty.Id == id);
     }
 }

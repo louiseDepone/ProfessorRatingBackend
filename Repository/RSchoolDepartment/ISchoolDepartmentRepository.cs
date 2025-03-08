@@ -6,7 +6,7 @@ public interface ISchoolDepartmentRepository
 {
     SchoolDepartment AddSchoolDepartment(SchoolDepartment schoolDepartment);
     SchoolDepartment UpdateSchoolDepartment(SchoolDepartment schoolDepartment);
-    SchoolDepartment DeleteSchoolDepartment(SchoolDepartment schoolDepartment);
+    void DeleteSchoolDepartment(SchoolDepartment schoolDepartment);
     List<SchoolDepartment> GetAllSchoolDepartments();
     SchoolDepartment? GetSchoolDepartmentById(int id);
 }

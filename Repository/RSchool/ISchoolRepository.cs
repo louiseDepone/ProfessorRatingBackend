@@ -6,7 +6,7 @@ public interface ISchoolRepository
 {
     School AddSchool(School school);
     School UpdateSchool(School school);
-    School DeleteSchool(School school);
+    void DeleteSchool(School school);
     List<School> GetAllSchools();
     School? GetSchoolById(int id);
 }
