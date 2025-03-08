@@ -1,8 +1,7 @@
-
 using ProfessorRating.DbContext;
 using ProfessorRating.Model;
-using ProfessorRating.Repository.RRole;
 
+namespace ProfessorRating.Repository.RRole;
 
 public class RoleRepository(ProfessorRatingDbContext context): IRoleRepository
 {
