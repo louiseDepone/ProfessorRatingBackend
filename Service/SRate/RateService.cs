@@ -12,25 +12,70 @@ public class RateService(IRateRepository rateRepository) : IRateService
     public Rate AddRate(CreateRateDTO rate)
     {
         throw new NotImplementedException();
+        try
+        {
+
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
     }
 
     public Rate UpdateRate(int id, CreateRateDTO rate)
     {
         throw new NotImplementedException();
+        try
+        {
+
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
     }
 
     public void DeleteRate(int id)
     {
         throw new NotImplementedException();
+        try
+        {
+
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
     }
 
     public List<Rate> GetAllRates()
     {
         throw new NotImplementedException();
+        try
+        {
+
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
     }
 
     public Rate? GetRateById(int id)
     {
         throw new NotImplementedException();
+        try
+        {
+
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
     }
 }

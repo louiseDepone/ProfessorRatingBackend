@@ -11,25 +11,70 @@ public class SchoolService(ISchoolRepository  schoolRepository) : ISchoolService
     public School AddSchool(CreateSchoolDTO school)
     {
         throw new NotImplementedException();
+        try
+        {
+
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
     }
 
     public School UpdateSchool(int id, CreateSchoolDTO school)
     {
         throw new NotImplementedException();
+        try
+        {
+
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
     }
 
     public void DeleteSchool(int id)
     {
         throw new NotImplementedException();
+        try
+        {
+
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
     }
 
     public List<School> GetAllSchools()
     {
         throw new NotImplementedException();
+        try
+        {
+
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
     }
 
     public School? GetSchoolById(int id)
     {
         throw new NotImplementedException();
+        try
+        {
+
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
     }
 }

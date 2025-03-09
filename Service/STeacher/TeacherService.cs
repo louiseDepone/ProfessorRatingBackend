@@ -10,25 +10,70 @@ public class TeacherService(ITeacherRepository  teacherRepository) : ITeacherSer
     public Teacher AddTeacher(CreateTeacherDTO teacher)
     {
         throw new NotImplementedException();
+        try
+        {
+
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
     }
 
     public Teacher UpdateTeacher(int id, CreateTeacherDTO teacher)
     {
         throw new NotImplementedException();
+        try
+        {
+
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
     }
 
     public void DeleteTeacher(int id)
     {
         throw new NotImplementedException();
+        try
+        {
+
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
     }
 
     public List<Teacher> GetAllTeachers()
     {
         throw new NotImplementedException();
+        try
+        {
+
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
     }
 
     public Teacher? GetTeacherById(int id)
     {
         throw new NotImplementedException();
+        try
+        {
+
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
     }
 }

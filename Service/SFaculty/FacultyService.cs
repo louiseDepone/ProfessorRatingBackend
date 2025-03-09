@@ -10,25 +10,70 @@ public class FacultyService(IFacultyRepository  facultyRepository): IFacultyServ
     public Faculty AddFaculty(CreateFacultyDTO faculty)
     {
         throw new NotImplementedException();
+        try
+        {
+
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
     }
 
     public Faculty UpdateFaculty(int id, CreateFacultyDTO faculty)
     {
         throw new NotImplementedException();
+        try
+        {
+
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
     }
 
     public void DeleteFaculty(int id)
     {
         throw new NotImplementedException();
+        try
+        {
+
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
     }
 
     public List<Faculty> GetAllFaculties()
     {
         throw new NotImplementedException();
+        try
+        {
+
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
     }
 
     public Faculty? GetFacultyById(int id)
     {
         throw new NotImplementedException();
+        try
+        {
+
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
     }
 }

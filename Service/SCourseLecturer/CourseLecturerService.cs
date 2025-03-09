@@ -10,25 +10,70 @@ public class CourseLecturerService(ICourseLecturerRepository  courseLecturerRepo
     public CourseLecturer AddCCourseLecturer(CreateCourseLecturerDTO courseLecturer)
     {
         throw new NotImplementedException();
+        try
+        {
+
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
     }
 
     public CourseLecturer UpdateCourseLecturer(int id, CreateCourseLecturerDTO courseLecturer)
     {
         throw new NotImplementedException();
+        try
+        {
+
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
     }
 
     public void DeleteCourseLecturer(int id)
     {
         throw new NotImplementedException();
+        try
+        {
+
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
     }
 
     public List<CourseLecturer> GetAllCCourseLecturer()
     {
         throw new NotImplementedException();
+        try
+        {
+
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
     }
 
     public CourseLecturer? GetCourseLecturerById(int id)
     {
         throw new NotImplementedException();
+        try
+        {
+
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
     }
 }

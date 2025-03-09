@@ -10,25 +10,70 @@ public class SchoolDepartmentService(ISchoolDepartmentRepository  schoolDepartme
     public SchoolDepartment AddSchoolDepartment(CreateSchoolDepartmentDTO schoolDepartment)
     {
         throw new NotImplementedException();
+        try
+        {
+
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
     }
 
     public SchoolDepartment UpdateSchoolDepartment(int id, CreateSchoolDepartmentDTO schoolDepartment)
     {
         throw new NotImplementedException();
+        try
+        {
+
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
     }
 
     public void DeleteSchoolDepartment(int id)
     {
         throw new NotImplementedException();
+        try
+        {
+
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
     }
 
     public List<SchoolDepartment> GetAllSchoolDepartments()
     {
         throw new NotImplementedException();
+        try
+        {
+
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
     }
 
     public SchoolDepartment? GetSchoolDepartmentById(int id)
     {
         throw new NotImplementedException();
+        try
+        {
+
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
     }
 }
