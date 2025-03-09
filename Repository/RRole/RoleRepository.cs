@@ -29,4 +29,9 @@ public class RoleRepository(ProfessorRatingDbContext context): IRoleRepository
     {
         return _context.Role.ToList();  
     }
+
+    public Role? GetRoleById(int id)
+    {
+        return _context.Role.FirstOrDefault(role => role.Id == id);
+    }
 }

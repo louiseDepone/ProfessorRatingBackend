@@ -65,10 +65,11 @@ public class UserService(IUserRepository userRepository):IUserService
 
     public User? GetUserById(int id)
     {
-        throw new NotImplementedException();
         try
         {
-
+            var user = _userRepository.GetUserById(id);
+            if (user is not null) return user; 
+            throw new Exception("User not found");
         }
         catch (Exception e)
         {

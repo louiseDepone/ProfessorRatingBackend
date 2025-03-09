@@ -65,10 +65,11 @@ public class SchoolDepartmentService(ISchoolDepartmentRepository  schoolDepartme
 
     public SchoolDepartment? GetSchoolDepartmentById(int id)
     {
-        throw new NotImplementedException();
         try
         {
-
+            var schooldepartment = _schoolDepartmentRepository.GetSchoolDepartmentById(id);
+            if (schooldepartment is not null) return schooldepartment;
+            throw new Exception("School department not found");          
         }
         catch (Exception e)
         {

@@ -65,10 +65,11 @@ public class TeacherService(ITeacherRepository  teacherRepository) : ITeacherSer
 
     public Teacher? GetTeacherById(int id)
     {
-        throw new NotImplementedException();
         try
         {
-
+            var  teacher = _teacherRepository.GetTeacherById(id);
+            if (teacher is not null) return teacher;
+            throw new Exception("Teacher not found");
         }
         catch (Exception e)
         {

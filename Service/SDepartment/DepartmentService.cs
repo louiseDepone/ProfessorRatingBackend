@@ -65,9 +65,12 @@ public class DepartmentService(IDepartmentRepository  departmentRepository): IDe
 
     public Department? GetDepartmentById(int id)
     {
-        throw new NotImplementedException();
+        
         try
         {
+            var department = _departmentRepository.GetDepartmentById(id);
+            if (department is not null) return department;
+            throw new Exception("Department Id not found");
 
         }
         catch (Exception e)

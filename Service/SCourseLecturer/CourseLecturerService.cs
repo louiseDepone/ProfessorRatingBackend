@@ -65,10 +65,11 @@ public class CourseLecturerService(ICourseLecturerRepository  courseLecturerRepo
 
     public CourseLecturer? GetCourseLecturerById(int id)
     {
-        throw new NotImplementedException();
         try
         {
-
+            var lecturer = _courseLecturerRepository.GetCourseLecturerById(id);
+            if (lecturer is not null) return lecturer;
+            throw new Exception("Course Lecturer Id not found");
         }
         catch (Exception e)
         {

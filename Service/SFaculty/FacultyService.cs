@@ -65,9 +65,11 @@ public class FacultyService(IFacultyRepository  facultyRepository): IFacultyServ
 
     public Faculty? GetFacultyById(int id)
     {
-        throw new NotImplementedException();
         try
         {
+            var  faculty = _facultyRepository.GetFacultyById(id);
+            if (faculty is not null) return faculty;
+            throw new Exception("Faculty Id not found");
 
         }
         catch (Exception e)

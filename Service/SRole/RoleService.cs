@@ -63,4 +63,19 @@ public class RoleService(IRoleRepository  rateRepository) : IRoleService
             throw;
         }
     }
+
+    public Role GetRoleById(int id)
+    {
+        try
+        {
+            var role = _roleRepository.GetRoleById(id);
+            if (role is not null) return role;
+            throw new Exception("Role not found");
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }      
+    }
 }

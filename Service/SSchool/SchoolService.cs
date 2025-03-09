@@ -66,10 +66,11 @@ public class SchoolService(ISchoolRepository  schoolRepository) : ISchoolService
 
     public School? GetSchoolById(int id)
     {
-        throw new NotImplementedException();
         try
         {
-
+            var school = _schoolRepository.GetSchoolById(id);
+            if (school is not null) return school;
+            throw new Exception("School not found");
         }
         catch (Exception e)
         {

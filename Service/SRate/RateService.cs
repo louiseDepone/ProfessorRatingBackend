@@ -67,10 +67,11 @@ public class RateService(IRateRepository rateRepository) : IRateService
 
     public Rate? GetRateById(int id)
     {
-        throw new NotImplementedException();
         try
         {
-
+            var rate = _rateRepository.GetRateById(id);
+            if (rate is null) return null;
+            throw new Exception("Rate not found");
         }
         catch (Exception e)
         {

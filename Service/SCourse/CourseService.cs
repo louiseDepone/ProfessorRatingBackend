@@ -62,14 +62,16 @@ public class CourseService(ICourseRepository  courseRepository) : ICourseService
 
     public Course? GetCourseById(int id)
     {
-        throw new NotImplementedException();
         try
         {
-
+             var course = _courseRepository.GetCourseById(id);
+             if (course is not null) return course;
+             throw new Exception("Course Id not found");
         }
         catch (Exception e)
         {
             Console.WriteLine(e);
             throw;
-        }    }
+        }    
+    }
 }

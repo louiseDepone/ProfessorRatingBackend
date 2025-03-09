@@ -9,4 +9,5 @@ public interface IRoleService
     void UpdateRole(int id,CreateRoleDTO role);
     void DeleteRole(int id);
     List<Role> GetRoles();
+    Role GetRoleById(int id);
 }

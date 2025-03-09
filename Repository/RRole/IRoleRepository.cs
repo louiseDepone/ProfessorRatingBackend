@@ -7,5 +7,7 @@ public interface IRoleRepository
     void UpdateRole(Role role);
     void DeleteRole(Role role);
     List<Role> GetRoles();
+    Role? GetRoleById(int id);
+
     
 }
